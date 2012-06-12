@@ -9,7 +9,7 @@ gem 'mysql2'
 gem 'faker'
 gem 'haml'
 gem 'heroku'
-
+gem 'jsonp'
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,11 +1,18 @@
 class AddressesController < ApplicationController
-  respond_to :html, :json
+  respond_to :html, :json, :jsonp
 
   before_filter :find_address, :only => [:show, :edit, :update, :destroy]
 
   def index
     @addresses = Address.all(:limit => 100)
     respond_with @addresses
+    # p @addresses
+   # @addresses.map { |address| {first_name: "#{address.first_name}", last_name: "#{address.last_name}", address: "#{address.address}", city: "#{address.city}" }}
+    # respond_to do |format|
+    #   format.json {
+    #     render json: {}
+    #   }
+    # end
   end
 
   def show
