@@ -46,7 +46,7 @@ $(document).ready( function() {
         $('.address_loader').hide()
         for(var address_index in data) {
           address = data[address_index]
-          $('.addresses_list').append("<tr class='address'><td>" + address.first_name + "</td><td>" + address.last_name + "</td><td>" + address.address + "</td><td>" + address.city + "</td><td>" + address.state + "</td><td>" + address.zip + "</td><td><span class='icon delete' address_id='" + address.id + "'></span></td></tr>")
+          $('.addresses_list').append("<tr class='address'><td>" + address.first_name + "</td><td>" + address.last_name + "</td><td>" + address.email + "</td><td>" + address.address + "</td><td>" + address.city + "</td><td>" + address.state + "</td><td>" + address.zip + "</td><td><span class='icon delete' address_id='" + address.id + "'></span></td></tr>")
         }
       }
     })
