@@ -1,18 +1,15 @@
 class AddressesController < ApplicationController
-  respond_to :html, :json, :jsonp
+  respond_to :html, :json
 
   before_filter :find_address, :only => [:show, :edit, :update, :destroy]
 
   def index
-    @addresses = Address.all(:limit => 100)
+    if params[:q] && !params[:q].blank?
+      @addresses = Address.search(params[:q])
+    else
+      @addresses = Address.all(:limit => 1000)
+    end
     respond_with @addresses
-    # p @addresses
-   # @addresses.map { |address| {first_name: "#{address.first_name}", last_name: "#{address.last_name}", address: "#{address.address}", city: "#{address.city}" }}
-    # respond_to do |format|
-    #   format.json {
-    #     render json: {}
-    #   }
-    # end
   end
 
   def show
@@ -25,8 +22,7 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(params[:address])
-    @address.save
+    @address = Address.create(params[:address])
     respond_with @address
   end
 

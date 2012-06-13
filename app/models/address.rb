@@ -1,4 +1,6 @@
 class Address < ActiveRecord::Base
+  simple_column_search :first_name, :last_name, :email, :address, :city, :state, :zip
+
   attr_accessible :first_name, :last_name, :email, :address, :city, :state, :zip
 
   validates :first_name, :presence => true

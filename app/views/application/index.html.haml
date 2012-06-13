@@ -1,0 +1,50 @@
+.success You have successfully added an address!
+#error_explanation
+  %h2 You have errors!
+  %ul.error_list
+%span.first_name_field
+  %label{:for => 'first_name_input'} First Name
+  %input#first_name_input{:type => 'text'}
+  %br
+%span.last_name_field
+  %label{:for => 'last_name_input'} Last Name
+  %input#last_name_input{:type => 'text'}
+  %br
+%span.email_field
+  %label{:for => 'email_input'} Email
+  %input#email_input{:type => 'text'}
+  %br
+%span.address_field
+  %label{:for => 'address_input'} Address
+  %input#address_input{:type => 'text'}
+  %br
+%span.city_field
+  %label{:for => 'city_input'} City
+  %input#city_input{:type => 'text'}
+  %br
+%span.state_field
+  %label{:for => 'state_input'} State
+  %input#state_input{:type => 'text'}
+  %br
+%span.zip_field
+  %label{:for => 'zip_input'} Zip
+  %input#zip_input{:type => 'text'}
+  %br
+%button.submit_new_address Create Address
+%img.create_loader.loader{:src => 'assets/loader.gif'}
+
+%hr
+%input.first_name_input{:type => 'text'}
+%button.filter_button Filter
+%img.address_loader.loader{:src => 'assets/loader.gif'}
+%table.addresses_table
+  %tr
+    %th.first_name First Name
+    %th.last_name Last Name
+    %th.email Email
+    %th.address Address
+    %th.city City
+    %th.state State
+    %th.zip Zip
+    %th.remove
+  %tbody.addresses_list

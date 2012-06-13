@@ -1,1 +1,16 @@
-= @addresses.inspect
+%table
+  %tr
+    %th.first_name First Name
+    %th.last_name Last Name
+    %th.address Address
+    %th.city City
+    %th.state State
+    %th.zip Zip
+  - @addresses.each do |address|
+    %tr
+      %td= address.first_name
+      %td= address.last_name
+      %td= address.address
+      %td= address.city
+      %td= address.state
+      %td= address.zip

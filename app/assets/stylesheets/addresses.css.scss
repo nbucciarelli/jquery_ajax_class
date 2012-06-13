@@ -1,3 +1,110 @@
 // Place all the styles related to the addresses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#error_explanation, .error_explanation, #errorExplanation, .errorExplanation {
+  display: none;
+  padding: 20px 35px !important;
+  border: 1px solid #8a1f11 !important;
+  padding: 7px !important;
+  padding-bottom: 12px !important;
+  margin: 20px 0 !important;
+  background: #FFFFD5 !important;
+  color: #8a1f11 !important;
+  width: 570px !important;
+  h2 {
+    text-align: left !important;
+    font-weight: bold !important;
+    padding: 5px 5px 5px 15px !important;
+    font-size: 12px !important;
+    margin: -7px !important;
+    margin-bottom: 5px !important;
+    background-color: #FFFFD5 !important;
+  }
+  p {
+    color: #333 !important;
+    margin-bottom: 0 !important;
+    padding: 5px !important;
+  }
+  ul {
+    margin-left: 25px;
+    li {
+      font-size: 12px !important;
+      list-style: square !important;
+      list-style-position: inside;
+    }
+  }
+}
+
+.field_with_errors {
+  display: inline !important;
+  label {
+    color: #8a1f11 !important;
+  }
+  input, select, textarea {
+    border: 1px solid #8a1f11 !important;
+    background-color: #FFFFD5 !important;
+    color: red !important;
+  }
+}
+
+th.first_name {
+  width: 110px;
+}
+
+th.last_name {
+  width: 110px;
+}
+
+th.email {
+  width: 200px;
+}
+
+th.address {
+  width: 200px;
+}
+
+th.city {
+  width: 150px;
+}
+
+th.state {
+  width: 150px;
+}
+
+th.zip {
+  width: 100px;
+}
+
+tr:nth-child(even){
+  background: #CCC;
+}
+
+tr:nth-child(odd){
+  background: #FFF;
+}
+
+tr:hover{
+  background-color: lightyellow !important;
+}
+
+
+.icon {
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 16px;
+  margin: 0 6px -3px 0;
+  width: 16px;
+}
+.delete {
+  background-image: url(/assets/bullet_delete.png);
+}
+
+.loader {
+  display: none;
+}
+
+.success {
+  display: none;
+}
