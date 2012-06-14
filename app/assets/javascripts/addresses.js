@@ -40,7 +40,7 @@ $(document).ready( function() {
     $.ajax({
       type: "get",
       url: "/addresses",
-      data: { q: $('.first_name_input').val() },
+      data: { q: $('.filter_input').val() },
       dataType: 'json',
       success: function(data) {
         $('.address_loader').hide()
